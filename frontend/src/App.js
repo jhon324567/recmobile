@@ -197,6 +197,7 @@ export default function App() {
         {/* Cover */}
         <section className="cover-wrap" data-testid="cover-section">
           <div className="cover-glow" aria-hidden="true" />
+          <div className="cover-edge-blur" aria-hidden="true" />
           <div className="cover-frame">
             <img
               src={COVER_IMAGE}

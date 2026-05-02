@@ -111,7 +111,8 @@ body {
 
 .cover-glow {
   position: absolute;
-  inset: -40px;
+  inset: -28px;
+  border-radius: 40px;
   background:
     radial-gradient(
       ellipse at 50% 45%,
@@ -122,6 +123,43 @@ body {
   filter: blur(22px);
   z-index: 0;
   animation: pulseGlow 5s ease-in-out infinite;
+}
+
+/* Edge blur — pulses on the perimeter of the cover */
+.cover-edge-blur {
+  position: absolute;
+  inset: -14px;
+  border-radius: 32px;
+  z-index: 0;
+  pointer-events: none;
+  padding: 14px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(246, 231, 189, 0.55),
+      rgba(215, 181, 106, 0.35) 40%,
+      rgba(246, 231, 189, 0.6) 100%
+    );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  filter: blur(14px);
+  animation: edgeBlurPulse 4.2s ease-in-out infinite;
+}
+
+@keyframes edgeBlurPulse {
+  0%, 100% {
+    filter: blur(10px);
+    opacity: 0.55;
+    transform: scale(0.985);
+  }
+  50% {
+    filter: blur(22px);
+    opacity: 1;
+    transform: scale(1.025);
+  }
 }
 
 @keyframes pulseGlow {
@@ -202,15 +240,16 @@ body {
 .hero-title {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(1.9rem, 6vw, 2.7rem);
+  font-size: clamp(1.2rem, 4.6vw, 2.2rem);
   line-height: 1.1;
   margin: 0 0 18px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: baseline;
-  gap: 10px 14px;
+  gap: 8px 10px;
+  white-space: nowrap;
 }
 
 .hero-title-name {
@@ -523,6 +562,7 @@ body {
   .gold-btn-sheen,
   .cover-frame,
   .cover-glow,
+  .cover-edge-blur,
   .hero-divider-dot,
   .footer-phrase span {
     animation: none !important;
