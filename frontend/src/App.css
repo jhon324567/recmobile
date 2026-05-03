@@ -3,6 +3,31 @@
    Palette inspired by user's 4 references
 ============================================================ */
 
+@font-face {
+  font-family: "Thunder";
+  src: url("./fonts/Thunder-VF.ttf") format("truetype-variations"),
+       url("./fonts/Thunder-VF.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Thunder";
+  src: url("./fonts/Thunder-BlackHC.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Thunder";
+  src: url("./fonts/Thunder-BoldHC.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --navy-950: #05091a;
   --navy-900: #08102a;
@@ -238,17 +263,17 @@ body {
 }
 
 .hero-title {
-  font-family: "Cinzel", "Playfair Display", Georgia, serif;
+  font-family: "Thunder", "Cinzel", "Playfair Display", Georgia, serif;
   font-weight: 900;
-  font-size: clamp(1.15rem, 4.2vw, 2rem);
-  line-height: 1.15;
-  margin: 0 0 10px;
-  letter-spacing: 0.04em;
+  font-size: clamp(1.9rem, 6.8vw, 3.2rem);
+  line-height: 1;
+  margin: 0 0 14px;
+  letter-spacing: 0.02em;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: baseline;
-  gap: 6px 10px;
+  gap: 6px 12px;
   white-space: nowrap;
   text-transform: uppercase;
   position: relative;
@@ -580,14 +605,15 @@ body {
 }
 
 .footer-phrase {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-weight: 500;
-  font-size: clamp(0.95rem, 2.6vw, 1.08rem);
+  font-family: "Thunder", "Playfair Display", Georgia, serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(1.3rem, 3.8vw, 1.7rem);
   color: var(--ink-dim);
   margin: 0;
-  letter-spacing: 0.02em;
-  line-height: 1.5;
+  letter-spacing: 0.04em;
+  line-height: 1.25;
+  text-transform: uppercase;
 }
 
 .footer-phrase span {
@@ -601,7 +627,7 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-weight: 700;
+  font-weight: 800;
   font-style: normal;
   animation: gradientShift 4s ease-in-out infinite;
 }
