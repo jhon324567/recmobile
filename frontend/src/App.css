@@ -263,26 +263,24 @@ body {
 }
 
 .hero-title {
-  font-family: "Thunder", "Cinzel", "Playfair Display", Georgia, serif;
+  font-family: "Montserrat", "Cinzel", "Playfair Display", Georgia, sans-serif;
   font-weight: 900;
-  font-size: clamp(1.9rem, 6.8vw, 3.2rem);
-  line-height: 1;
+  font-size: clamp(1.15rem, 4.4vw, 2rem);
+  line-height: 1.1;
   margin: 0 0 14px;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: baseline;
-  gap: 6px 12px;
+  gap: 6px 10px;
   white-space: nowrap;
   text-transform: uppercase;
   position: relative;
 }
 
-/* Gold gradient + moving sheen on the whole title */
-.hero-title-name,
-.hero-title-sep,
-.hero-title-role {
+/* "Jhonnatan" keeps the animated gold gradient + sheen */
+.hero-title-name {
   background-image: linear-gradient(
     100deg,
     #a8863f 0%,
@@ -306,16 +304,18 @@ body {
 }
 
 .hero-title-sep {
+  color: #ffffff;
   font-weight: 500;
-  opacity: 0.85;
+  opacity: 0.55;
   font-size: 0.9em;
-  animation-delay: 0.15s;
 }
 
+/* "Estrategista Digital" in solid white with subtle glow */
 .hero-title-role {
-  font-weight: 700;
-  font-size: 0.88em;
-  animation-delay: 0.3s;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.9em;
+  text-shadow: 0 0 18px rgba(255, 255, 255, 0.18);
 }
 
 @keyframes titleSheen {
@@ -605,14 +605,14 @@ body {
 }
 
 .footer-phrase {
-  font-family: "Thunder", "Playfair Display", Georgia, serif;
+  font-family: "Montserrat", "Playfair Display", Georgia, sans-serif;
   font-style: normal;
-  font-weight: 600;
-  font-size: clamp(1.3rem, 3.8vw, 1.7rem);
+  font-weight: 800;
+  font-size: clamp(0.82rem, 2.4vw, 1rem);
   color: var(--ink-dim);
   margin: 0;
-  letter-spacing: 0.04em;
-  line-height: 1.25;
+  letter-spacing: 0.05em;
+  line-height: 1.4;
   text-transform: uppercase;
 }
 
